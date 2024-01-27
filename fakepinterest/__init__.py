@@ -5,10 +5,12 @@ from flask_bcrypt import Bcrypt
 import os
 
 app = Flask(__name__)
+
 if os.getenv('DEBUG') == 0:
     link_banco = os.getenv('DATABASE_URL')
     senha = os.getenv('SENHA_SECRETA')
 else:
+
     link_banco = "sqlite:///comunidade.db"
     senha = '888b4eff900cfc5f7c711d4f90b382cc'
 
