@@ -55,6 +55,11 @@ Perfil - {{usuario.username}}
         imagemArquivo.classList.add("visivel");
         imagemArquivo.innerText = inputImagem.name;
       });
+      form_foto.addEventListener("submit", (event) => {
+        if (!form_foto.validate()) {
+          event.preventDefault();
+        }
+      });
     </script>
 
 
