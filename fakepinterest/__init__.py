@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-if os.getenv('DEBUG') == 0:
+if int(os.getenv('DEBUG')) == 0:
     link_banco = os.getenv('DATABASE_URL')
     senha = os.getenv('SENHA_SECRETA')
 else:
